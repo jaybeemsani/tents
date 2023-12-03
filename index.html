@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SboMumbo</title>
+
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Foldit&family=Italianno&family=Lobster&family=Pacifico&family=Playfair+Display:wght@700&family=Raleway&family=Shadows+Into+Light&display=swap');
+        body{
+            background-color: rgb(248, 245, 245);
+            margin: 0;
+            padding: 0%;
+            height: 3000vh;
+        }
+
+        .logo{
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Foldit', sans-serif;
+            font-family: 'Italianno', cursive;
+            font-family: 'Lobster', sans-serif;
+            color: navy;
+            margin-left: 40px;
+            margin-top: 0;
+
+        }
+        .navbar{
+            width: 40%;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .nav-container{
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            background-color: white;
+            top: 0;
+        }
+        .navs{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 3fr;
+        }
+        .navs li{
+            list-style: none;
+        }
+        .navs li a{
+            text-decoration: none;
+            color: rgb(201, 172, 9);
+            transition: 0.3s;
+        }
+        .navs li a:hover{
+            font-size: 18px;
+        }
+        .navs li .wtp{
+            background-color: rgb(201, 172, 9);
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 30px;
+            color: white;
+        }
+        .navs li .wtp:hover{
+            background-color: white;
+            border: 2px rgb(201, 172, 9) dashed;
+            color:rgb(201, 172, 9) ;
+        }
+
+        @media(max-width:880px){
+             .navs{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 2fr;
+        }
+
+            .navbar{
+                width: 60%;
+                height: 60px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        .hero{
+            width: 100%;
+            height: 600px;
+            background:url(deco-one.jpeg) no-repeat;
+            background-color: red;
+            background-size: cover;
+            text-align: center;
+            
+        }
+        .intro{
+            padding-top: 220px;
+            color: goldenrod;
+        }
+
+        .intro .name{
+            font-size: 70px;
+        }
+        .specify{
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Foldit', sans-serif;
+            font-family: 'Italianno', cursive;
+            font-family: 'Lobster', sans-serif;
+            font-size: 25px;
+        }
+        .tittles{
+            text-align: center;
+            color: navy;
+        }
+        .gallery{
+            width: 95%;
+            margin: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 5px;
+        }
+        .gallery div{
+            
+            height: 400px;
+        }
+        .gallery div img{
+            height: 250px;
+            object-fit: cover;
+            max-height: fit-content;
+            width: 90%;
+        }
+        .gallery div p{
+            text-align: center;
+        }
+        .gallery div p a{
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px 15px 10px 15px;
+            border-radius: 20px;
+            transition: 0.3s ease;
+        }
+        .gallery div p a:hover{
+            box-shadow: 2px 3px 4px rgb(189, 187, 187);
+
+        }
+        .desc{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .card{
+            width: 100%;
+            max-width: 60%;
+            border-radius: 5%;
+            height: 500px;
+            background:linear-gradient(320deg,pink,lightblue);
+            margin: auto;
+        }
+        .icon{
+            margin-top: 60px;
+            margin-left: 30px;
+        }
+        footer{
+            width: 100%;
+            height: 500px;
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-left: 80px;
+        }
+        .details-paragraph{
+            line-height: 20px;
+            text-transform: capitalize;
+        }
+        @media(max-width:600px){
+            .gallery{
+            width: 95%;
+            margin: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            column-gap: 20px;
+            row-gap: 5px;
+        }
+        .navbar {
+            width: 100%;
+            height: 60px;
+            position: static;
+            display: block;
+        }
+        .nav-container{
+            position: fixed;
+            height: 80px;
+            width: 100%;
+            margin: 0;
+            background-color: white;
+            top: 0;
+        }
+        .logo{
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Foldit', sans-serif;
+            font-family: 'Italianno', cursive;
+            font-family: 'Lobster', sans-serif;
+            color: navy;
+            margin-left: 40px;
+            margin-top: 0;
+            height: 20px;
+
+        }
+        .navs{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+        }
+        }
+
+        @media(max-width:345px){
+         .wtp{
+            display: none;
+         }
+         .navs{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+        .specify{
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Foldit', sans-serif;
+            font-family: 'Italianno', cursive;
+            font-family: 'Lobster', sans-serif;
+            font-size: 20px;
+        }
+        .intro .name{
+            font-size: 40px;
+        }
+
+        .hero{
+            width: 100%;
+            height: 500px;
+            background:url(deco-one.jpeg) no-repeat;
+            background-color: red;
+            background-size: cover;
+            text-align: center;
+            
+        }
+        .gallery{
+            width: 95%;
+            margin: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+           
+        }
+       
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h1 class="logo">SboMumbo</h1>
+        <div class="navbar">
+            <ul class="navs">
+                <li><a href="">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="https://wa.me/616127430" target="_blank" class="wtp">WhatsApp Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero">
+        <p class="intro"><span class="name">SboMumbo</span><br><span class="specify">Events&Catering</span></p>
+    </div>
+
+    <h1 class="tittles">Photos</h1>
+    <h2 style="padding-left: 30px; color: goldenrod;">Decor</h2>
+    <div class="gallery">
+       
+       
+        <div>
+            <img src="six.jpeg" alt="">
+            <p><a href="six.jpeg" download>Download</a></p>
+        </div>
+        
+        <div>
+            <img src="eight.jpeg" alt="">
+            <p><a href="eight.jpeg" download>Download</a></p>
+        </div>
+        <div>
+            <img src="nine.jpeg" alt="">
+            <p><a href="nine.jpeg" download>Download</a></p>
+        </div>
+       
+       
+       
+        <div>
+            <img src="twenty-three.jpeg" alt="">
+            <p><a href="twenty-three.jpeg" download>Download</a></p>
+        </div>
+      
+        <div>
+            <img src="deco-one.jpeg" alt="">
+            <p><a href="deco-one.jpeg" download>Download</a></p>
+        </div>
+        <div>
+            <img src="hero.jpeg" alt="">
+            <p><a href="hero.jpeg" download>Download</a></p>
+        </div>
+
+
+
+       
+    </div>
+
+    <h1 class="tittles"><a name="gallery"></a>Contact Us</h1>
+    <p class="desc">Our online service is valid 24hr.so make sure you text or call us and we will assist you!!</p>
+    <div class="card">
+        <a href="https://wa.me/616127430" target="_blank"><img class="icon" src="whatsapp-icon-removebg-preview.png" alt=""></a>
+        <a href=""><img class="icon" src="call-removebg-preview.png" alt=""></a>
+    </div>
+    <footer>
+        <div>
+            <p style="font-weight: bold;">About Us</p>
+            <p class="details-paragraph">Step into a world where dreams unfold under a canopy of possibilities. At Gcwabe's, we are not just in the business of providing tents, décor, and catering services – we are curators of unforgettable moments. Our canvas is your celebration, and our passion lies in turning your vision into a breathtaking reality. Whether it's the rustle of the tent flaps in the evening breeze, the ethereal glow of carefully chosen décor, or the tantalizing aroma of expertly crafted cuisine, we specialize in weaving the threads of enchantment that transform events into lifelong memories. Welcome to a realm where every detail is meticulously considered, and each event is a masterpiece in the making. Join us in crafting experiences that transcend the ordinary and embrace the extraordinary.</p>
+        </div>
+        <div></div>
+        <div></div>
+    </footer>
+    
+</body>
+</html>
